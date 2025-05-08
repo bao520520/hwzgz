@@ -1,0 +1,80 @@
+/* 更优雅的搜索区域样式 */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 30px auto;
+    max-width: 600px;
+}
+
+.search-container input[type="text"] {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #F99FC6;
+    border-radius: 8px;
+    outline: none;
+    background-color: #FFF0F5;
+    transition: border-color 0.3s;
+}
+
+.search-container input[type="text"]:focus {
+    border-color: #F77F9A;
+}
+
+/* 更立体感的按钮 */
+.search-container button {
+    background-color: #F99FC6;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-container button:hover {
+    background-color: #F77F9A;
+    transform: translateY(-2px);
+}
+
+/* 搜索结果区优化 */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+li {
+    background-color: #ffffff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: translateY(-4px);
+}
+
+li p {
+    font-weight: bold;
+    color: #9B4D96;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* 美化播放器 */
+audio,
+video {
+    width: 100%;
+    border-radius: 6px;
+    background-color: #f2f2f2;
+}
