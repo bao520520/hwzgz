@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品页面 - 海外化妆品</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #e26a8c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-around;
+    }
+
+    .product-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 200px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product-card h3 {
+      color: #e26a8c;
+    }
+
+    .product-card p {
+      color: #777;
+    }
+
+    .buy-btn {
+      background-color: #e26a8c;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .buy-btn:hover {
+      background-color: #d35a7e;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 商品展示区域 -->
+  <div class="header">
+    <h1>海外化妆品商城</h1>
+  </div>
+
+  <div class="content">
+    <div class="product-list">
+      <!-- 商品1 -->
+      <div class="product-card">
+        <img src="jpg/1.jpg" alt="洗脸香皂">
+        <h3>洗脸香皂</h3>
+        <p>¥39.9</p>
+        <button class="buy-btn" onclick="location.href='payment.html?product=1'">立即购买</button>
+      </div>
+      <!-- 商品2 -->
+      <div class="product-card">
+        <img src="jpg/2.jpg" alt="日霜">
+        <h3>日霜</h3>
+        <p>¥38.8</p>
+        <button class="buy-btn" onclick="location.href='payment.html?product=2'">立即购买</button>
+      </div>
+      <!-- 商品3 -->
+      <div class="product-card">
+        <img src="jpg/3.jpg" alt="晚霜">
+        <h3>晚霜</h3>
+        <p>¥45.5</p>
+        <button class="buy-btn" onclick="location.href='payment.html?product=3'">立即购买</button>
+      </div>
+      <!-- 商品4 -->
+      <div class="product-card">
+        <img src="jpg/4.jpg" alt="三件套">
+        <h3>三件套</h3>
+        <p>¥90</p>
+        <button class="buy-btn" onclick="location.href='payment.html?product=4'">立即购买</button>
+      </div>
+      <!-- 商品5 -->
+      <div class="product-card">
+        <img src="jpg/5.jpg" alt="洗脸香皂+日霜">
+        <h3>洗脸香皂+日霜</h3>
+        <p>¥68</p>
+        <button class="buy-btn" onclick="location.href='payment.html?product=5'">立即购买</button>
+      </div>
+      <!-- 商品6 -->
+      <div class="product-card">
+        <img src="jpg/6.jpg" alt="洗脸香皂+晚霜">
+        <h3>洗脸香皂+晚霜</h3>
+        <p>¥70.8</p>
+        <button class="buy-btn" onclick="location.href='payment.html?product=6'">立即购买</button>
+      </div>
+      <!-- 商品7 -->
+      <div class="product-card">
+        <img src="jpg/7.jpg" alt="洗脸香皂+两个日霜">
+        <h3>洗脸香皂+两个日霜</h3>
+        <p>¥88</p>
+        <button class="buy-btn" onclick="location.href='payment.html?product=7'">立即购买</button>
+      </div>
+      <!-- 商品8 -->
+      <div class="product-card">
+        <img src="jpg/8.jpg" alt="洗脸香皂+两个晚霜">
+        <h3>洗脸香皂+两个晚霜</h3>
+        <p>¥100</p>
+        <button class="buy-btn" onclick="location.href='payment.html?product=8'">立即购买</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

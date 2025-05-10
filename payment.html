@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>支付页面</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+    .finish-btn {
+      background-color: #e26a8c;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 30px;
+      transition: background-color 0.3s ease;
+    }
+    .finish-btn:hover {
+      background-color: #d35a7e;
+    }
+
+    .payment-qr-container {
+      display: flex;
+      justify-content: center;
+      gap: 50px; /* 调整二维码之间的间距 */
+      margin-top: 20px;
+    }
+
+    .payment-qr img {
+      width: 400px;  /* 设置二维码的宽度为400px */
+      height: 500px; /* 设置二维码的高度为500px */
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>支付页面</h1>
+
+  <div id="payment-container">
+    <!-- 显示二维码 -->
+    <div class="payment-qr-container">
+      <!-- 支付宝二维码 -->
+      <div class="payment-qr">
+        <p>支付宝</p>
+        <img src="" alt="支付宝支付二维码" id="alipay-qr">
+      </div>
+
+      <!-- 微信二维码 -->
+      <div class="payment-qr">
+        <p>微信</p>
+        <img src="" alt="微信支付二维码" id="wechat-qr">
+      </div>
+    </div>
+  </div>
+
+  <button class="finish-btn" onclick="location.href='contact-us.html'">支付完成</button>
+
+  <script>
+    // 获取商品 ID
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('product');
+    
+    // 定义商品二维码文件
+    const productQRs = {
+      1: { alipay: 'qrcode/alipay-pay1.jpg', wechat: 'qrcode/wechat-pay1.jpg' },
+      2: { alipay: 'qrcode/alipay-pay2.jpg', wechat: 'qrcode/wechat-pay2.jpg' },
+      3: { alipay: 'qrcode/alipay-pay3.jpg', wechat: 'qrcode/wechat-pay3.jpg' },
+      4: { alipay: 'qrcode/alipay-pay4.jpg', wechat: 'qrcode/wechat-pay4.jpg' },
+      5: { alipay: 'qrcode/alipay-pay5.jpg', wechat: 'qrcode/wechat-pay5.jpg' },
+      6: { alipay: 'qrcode/alipay-pay6.jpg', wechat: 'qrcode/wechat-pay6.jpg' },
+      7: { alipay: 'qrcode/alipay-pay7.jpg', wechat: 'qrcode/wechat-pay7.jpg' },
+      8: { alipay: 'qrcode/alipay-pay8.jpg', wechat: 'qrcode/wechat-pay8.jpg' }
+    };
+
+    // 获取对应商品的二维码
+    const qrData = productQRs[productId];
+
+    // 生成二维码展示
+    if (qrData) {
+      const alipayQR = document.getElementById('alipay-qr');
+      const wechatQR = document.getElementById('wechat-qr');
+      alipayQR.src = qrData.alipay;
+      wechatQR.src = qrData.wechat;
+    }
+  </script>
+
+</body>
+</html>
